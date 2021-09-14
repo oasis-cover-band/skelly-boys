@@ -1,0 +1,10 @@
+<span class="heading">
+    <h5 class="shine">SKULLY</h5>
+<h2>roadmap</h2>
+</span>
+<div class="roadmap-boxes" #roadmapScroller (mouseover)="toggleOver()">
+    <app-roadmap-box [index]="index + 1" [text]="roadmapBox" *ngFor="let roadmapBox of roadmapBoxes;let index = index"></app-roadmap-box>
+</div>
+<span class="pagination-dots">
+    <i [ngClass]="{'selectedIndex': selectedIndex === index}" class="dot" (click)="scrollToElement(index)" *ngFor="let roadmapBox of roadmapBoxes;let index = index"></i>
+</span>

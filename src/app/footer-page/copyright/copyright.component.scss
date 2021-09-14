@@ -1,0 +1,17 @@
+:host {
+    p {
+        font-size:1rem;
+        @media (max-width:820px) {
+            font-size:1.25rem;
+        }
+        @media (max-width:540px) {
+            font-size:2rem;
+        }
+        @media (max-width:660px) {
+            white-space: pre-line;
+        }
+        @media (max-width:410px) {
+            font-size:2.5rem;
+        }
+    }
+}

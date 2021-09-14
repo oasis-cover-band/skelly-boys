@@ -1,0 +1,7 @@
+<span class="heading">
+    <h2>Discover our</h2>
+    <h5 class="shine">FAQS</h5>
+    </span>
+    <div class="faq-items">
+        <app-faq-item [answer]="faqItem.answer" [question]="faqItem.question" *ngFor="let faqItem of faqItems"></app-faq-item>
+    </div>

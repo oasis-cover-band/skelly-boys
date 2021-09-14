@@ -1,0 +1,48 @@
+:host {
+    max-width:100%;
+    max-height:100%;
+    * {
+        max-width:100%;
+        max-height:100%;
+    }
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: max-content;
+    justify-content: center;
+    justify-items: center;
+    row-gap:2rem;
+    span.heading {
+        display:grid;
+        grid-template-areas:
+        'h2 h5';
+        grid-template-columns: max-content max-content;
+        grid-template-rows: max-content;
+        align-items: center;
+        align-content: center;
+        column-gap:0.5rem;
+        h5 {
+            grid-area:h5;
+            z-index:2;
+            font-size:7rem;
+            font-weight:100;
+            align-self: center;
+            transform: translateY(10%);
+        }
+        h2 {
+            grid-area:h2;
+            z-index:1;
+        }
+    }
+    div.faq-items {
+        max-width:100%;
+        max-height:100%;
+        min-width:100%;
+        min-height:100%;
+        justify-self:start;
+        display:grid;
+        grid-auto-flow: row;
+        grid-auto-columns: 1fr;
+        grid-auto-rows:max-content;
+        row-gap:2rem;
+    }
+}

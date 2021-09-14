@@ -1,0 +1,45 @@
+:host {
+    min-height:50vh;
+    min-width:100%;
+    display:grid;
+    grid-template-columns: 0.15fr 1fr 0.15fr;
+    grid-template-rows: 0.05fr 1fr 0.2fr;
+    grid-template-areas:
+    '. . .'
+    '. inner .'
+    '. . .';
+    justify-content: center;
+    justify-items: center;
+    border:2px solid #FF00CC;
+    align-items:start;
+    section.inner {
+        grid-area:inner;
+        display:grid;
+        grid-template-areas:
+        'index'
+        'text';
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content;
+        row-gap:3rem;
+        h5 {
+            justify-self: start;
+            text-align: left;
+            grid-area:index;
+            font-size: 5rem;
+            letter-spacing: 0.5rem;
+        }
+        p {
+            grid-area:text;
+            text-align:left;
+            text-transform: unset;
+            font-weight:100;
+            font-size:1rem;
+            @media (max-width: 820px) {
+                font-size:2rem;
+            }
+            @media (max-width: 410px) {
+                font-size:3rem;
+            }
+        }
+    }
+}

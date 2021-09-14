@@ -1,0 +1,116 @@
+:host {
+    display:grid;
+    grid-template-areas:
+    '. mock-button'
+    '. mint-message';
+    grid-template-rows: max-content max-content;
+    grid-template-columns: 0.25fr 1fr 0.25fr;
+    min-width:max-content;
+    max-width:max-content;
+    max-height:100%;
+    min-height:100%;
+    justify-content:center;
+    justify-items:center;
+    justify-self:center;
+    span.mock-button {
+        min-width:max-content;
+        max-width:max-content;
+        max-height:100%;
+        min-height:100%;
+        grid-area:mock-button;
+        justify-self: stretch;
+        border:4px solid #FF00CC;
+        border-radius:20px;
+        display:grid;
+        grid-template-areas:
+        '. . . . . . .'
+        '. mint . arrows . amount .'
+        '. for for for for for .'
+        '. . . . . . .';
+        grid-template-columns: 20px 0.5fr 15px 0.25fr 15px 0.5fr 20px;
+        grid-template-rows: 10px max-content max-content 20px;
+        row-gap:5px;
+        column-gap:20px;
+        justify-content:stretch;
+        justify-items:stretch;
+        h3 {
+            font-size:4rem;
+            line-height:4rem;
+        }
+        h3.mint {
+            grid-area:mint;
+            justify-self: start; 
+        }
+        h3.amount {
+            grid-area:amount;
+            align-self: center;
+            justify-self: end;
+            min-width:100%;
+            max-width:100%;
+            max-height:100%;
+            min-height:100%;
+        }
+        span.arrows {
+            grid-area:arrows;
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: max-content;
+            row-gap:10px;
+            align-self: center;
+            svg {
+                cursor: pointer;
+                transition:0.3s;
+                height:1.25rem;
+                width:1.25rem;
+                &:hover {
+                    filter:brightness(0.1) drop-shadow(0px 0px 10px #FF00CC);
+                }
+            }
+        }
+        h3.for {
+            grid-area:for;
+            font-size:3.4rem;
+            line-height:1rem;
+            small {
+                display:grid;
+                grid-auto-flow: column;
+                grid-template-columns: 0.33fr 1fr 0.33fr;
+                column-gap:40px;
+            }
+        }
+        @media (max-width:540px) {
+            transform:scale(0.9);
+            h3 {
+                font-size:8rem;
+                line-height:8rem;
+            }
+            h3.mint {
+            }
+            h3.amount {
+            }
+            span.arrows {
+                svg {
+                    height:2.5rem;
+                    width:2.5rem;
+                    &:hover {
+                        filter:brightness(0.1) drop-shadow(0px 0px 10px #FF00CC);
+                    }
+                }
+            }
+            h3.for {
+                font-size:6.8rem;
+                line-height:1rem;
+            }
+        }
+        @media (max-width:410px) {
+            transform:scale(0.8);
+        }
+        @media (max-width:350px) {
+            transform:scale(0.7);
+        }
+    }
+    p.mint-message {
+        transform:translateY(100%);
+        grid-area:mint-message;
+    }
+}

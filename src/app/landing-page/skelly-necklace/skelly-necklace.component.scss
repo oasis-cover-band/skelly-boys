@@ -1,0 +1,19 @@
+:host {
+    display: grid;
+    justify-content: start;
+    align-content: start;
+    svg {transform: translate(157px, -448px);
+        animation: hue 2s infinite;
+        @keyframes hue {
+            25% {
+                filter:brightness(1.4) hue-rotate(0deg);
+            }
+            50% {
+                filter:brightness(1) hue-rotate(360deg);
+            }
+            75% {
+                filter:brightness(0.5) hue-rotate(-480deg);
+            }
+        }
+    }
+}

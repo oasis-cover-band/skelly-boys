@@ -1,0 +1,74 @@
+:host {
+    min-height:50vh;
+    min-width:100%;
+    display:grid;
+    grid-template-columns: 0.15fr 1fr 0.15fr;
+    grid-template-rows: 0.05fr 1fr 0.2fr;
+    grid-template-areas:
+    '. . .'
+    '. inner .'
+    '. . .';
+    justify-content: center;
+    justify-items: center;
+    align-items:start;
+    cursor: pointer;
+    transition:0.2s;
+    pointer-events: visibleFill;
+    section.inner {
+        pointer-events: visibleFill;
+        transition:0.2s;
+        grid-area:inner;
+        display:grid;
+        grid-template-areas:
+        'image';
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        img {
+            pointer-events: visibleFill;
+            transition:0.2s;
+            grid-area: image;
+            z-index:100;
+            max-width:15vw;
+        }
+    }
+    &.opened {
+        section.inner {
+            img {
+                transform:scale(2) translateX(16.5vw);
+            }
+        }
+        &:nth-of-type(2) {
+            section.inner {
+                img {
+                    transform:scale(2) translateX(8.25vw);
+                }
+            }
+        }
+        &:nth-of-type(3) {
+            section.inner {
+                img {
+                    transform:scale(2);
+                }
+            }
+        }
+        &:nth-of-type(4) {
+            section.inner {
+                img {
+                    transform:scale(2) translateX(-8.25vw);
+                }
+            }
+        }
+        &:nth-of-type(5) {
+            section.inner {
+                img {
+                    transform:scale(2) translateX(-16.5vw);
+                }
+            }
+        }
+        z-index:10000;
+    }
+    &:hover {
+        z-index:9999;
+        filter:brightness(1.5);
+    }
+}

@@ -1,0 +1,49 @@
+:host {
+    display:grid;
+    grid-template-areas:
+    'logo .'
+    'logo club';
+    grid-template-columns:max-content max-content;
+    grid-template-rows: max-content max-content;
+    row-gap:0px;
+    transform:translateY(-12.5%) translateX(5%);
+    max-height:30rem;
+    pointer-events: none;
+    justify-self: center;
+    svg {
+        grid-area:logo;
+        transform:scale(2);
+        filter:drop-shadow(0px 0px 10px #FF00CC);
+        animation: shine 4s infinite;
+    }
+    h4 {
+        filter:none!important;
+        font-weight:100;
+        font-size:3rem;
+    }
+    span.club {
+        transform:translate(-165%, -155%);
+        grid-area:club;
+        display:grid;
+        grid-template-areas:
+        'bones bones'
+        '. club';
+        grid-template-columns: max-content max-content;
+        grid-template-rows: max-content max-content;
+        h4.bones {
+            grid-area:bones;
+        }
+        h4.club {
+            grid-area:club;
+            transform:translateY(-25%);
+        }
+    }
+    @media (max-width:540px) {
+        transform:scale(1.5);
+        max-height:40rem;
+    }
+    @media (max-width:410px) {
+        transform:scale(1.75);
+        max-height:45rem;
+    }
+}

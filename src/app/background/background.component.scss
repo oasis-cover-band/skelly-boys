@@ -1,0 +1,51 @@
+:host {
+    min-width:100vw;
+    max-width:100vw;
+    min-height:100vh;
+    max-height:100vh;
+    display:grid;
+    // grid-template-areas:
+    // 'vid1 vid2';
+    // grid-template-columns: 0.5fr 0.5fr;
+    grid-template-areas: 'vid1';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    overflow:hidden;
+    position:fixed;
+    
+    span {
+        display:grid;
+        grid-template-areas:
+        'video';
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        section.background {
+            grid-area:video;
+            background:url('../../assets/images/background.svg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: repeat;
+            background-size: 100% auto;
+            transition:1s;
+            svg {
+            }
+        }
+        video, div.background {
+            grid-area:video;
+        }
+        div.background {
+            background:#FF00CC;
+            mix-blend-mode: color;
+            z-index:99;
+        }
+    }
+    video {
+        grid-area:video;
+        min-width:100vw;
+        max-width:100vh;
+        min-height:100vh;
+        max-height:100vh;
+        object-fit: cover;
+        opacity:0.5;
+    }
+}
