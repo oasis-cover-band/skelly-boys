@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, Renderer2, AfterViewInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { ProjectService } from '../project.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -21,10 +22,16 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
   keyword = this.keywords[0];
   keywordIndex = 0;
   classes = new BehaviorSubject('');
+  startTime = this.projectService.startTime;
+  currentTime = 0;
   constructor(
+    private projectService: ProjectService
   ) { }
 
   ngOnInit(): void {
+    setInterval(() => {
+      this.currentTime = new Date().getTime();
+    }, 500);
   }
 
   ngAfterViewInit(): void {

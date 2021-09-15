@@ -2,7 +2,12 @@
     display: grid;
     justify-content: start;
     align-content: start;
-    svg {transform: translate(157px, -448px);
+    pointer-events: none!important;
+    * {
+        pointer-events: none!important;
+    }
+    img {
+        transform: translate(153px,-429px);
         animation: hue 2s infinite;
         @keyframes hue {
             25% {

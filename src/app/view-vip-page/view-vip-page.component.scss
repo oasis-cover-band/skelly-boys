@@ -1,0 +1,37 @@
+:host {
+    grid-area:content;
+    z-index:99999999999;
+    position:fixed;
+    min-width:100%;
+    min-height:100%;
+    max-width:100%;
+    max-height:100%;
+    display:grid;
+    grid-template-columns: 2rem 1fr 2rem;
+    grid-template-rows: 4rem 5vh 4rem 1fr 4rem;
+    grid-template-areas:
+    '. . .'
+    '. close .'
+    '. . .'
+    '. vip .'
+    '. . .';
+    background:#FF00CC44;
+    backdrop-filter: blur(10px);
+    transition:0.2s;
+    h5 {
+        pointer-events: all;
+        grid-area: close;
+        justify-self:end;
+        color:#FFF;
+        font-size:5rem;
+        cursor: pointer;
+        transition:0.5s;
+        &:hover {
+            transform:scale(1.5);
+        }
+    }
+
+    app-vip-box {
+        grid-area:vip;
+    }
+}

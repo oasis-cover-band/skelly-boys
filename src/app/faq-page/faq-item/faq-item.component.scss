@@ -38,6 +38,9 @@
         span.answer {
             grid-area:answer;
             transition:0.5s;
+            p {
+                white-space: pre-wrap;
+            }
             &.hidden {
                 font-size:0px;
                 opacity:0;

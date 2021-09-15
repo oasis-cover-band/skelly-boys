@@ -1,13 +1,19 @@
-<app-nav></app-nav>
-<app-background></app-background>
-<section class="content">
+<app-nav *ngIf="afterViewInit === true" [@fadeDownAnimations]></app-nav>
+<app-background *ngIf="afterViewInit === true" [@fadeAnimations]></app-background>
+<section class="content" *ngIf="afterViewInit === true" [@fadeUpAnimations]>
   <div class="spacer"></div>
   <app-landing-page></app-landing-page>
   <app-about-page></app-about-page>
   <app-vip-page></app-vip-page>
   <app-roadmap-page></app-roadmap-page>
-  <div class="spacer"></div>
+  <div class="spacer">
+    <h2>Skully Boys</h2>
+  </div>
   <app-faq-page></app-faq-page>
   <app-footer-page></app-footer-page>
-  <router-outlet></router-outlet>
 </section>
+<main [@routerAnimations]="outlet.isActivated ? outlet.activatedRoute : ''">
+  <router-outlet #outlet="outlet"></router-outlet>
+</main>
+
+<app-loading-page *ngIf="afterViewInit === false" [@fadeAnimations]></app-loading-page>

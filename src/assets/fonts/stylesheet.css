@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'Dead Skull';
-    src: url('DeadSkull.eot');
-    src: url('DeadSkull.eot?#iefix') format('embedded-opentype'),
-        url('DeadSkull.woff2') format('woff2'),
-        url('DeadSkull.woff') format('woff'),
-        url('DeadSkull.ttf') format('truetype'),
-        url('DeadSkull.svg#DeadSkull') format('svg');
+    font-family: 'Autograf';
+    src: url('Autograf.eot');
+    src: url('Autograf.eot?#iefix') format('embedded-opentype'),
+        url('Autograf.woff2') format('woff2'),
+        url('Autograf.woff') format('woff'),
+        url('Autograf.ttf') format('truetype'),
+        url('Autograf.svg#Autograf') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -25,6 +25,19 @@
 }
 
 @font-face {
+    font-family: 'Dead Skull';
+    src: url('DeadSkull.eot');
+    src: url('DeadSkull.eot?#iefix') format('embedded-opentype'),
+        url('DeadSkull.woff2') format('woff2'),
+        url('DeadSkull.woff') format('woff'),
+        url('DeadSkull.ttf') format('truetype'),
+        url('DeadSkull.svg#DeadSkull') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'HeatWave';
     src: url('HeatWave.eot');
     src: url('HeatWave.eot?#iefix') format('embedded-opentype'),
@@ -33,6 +46,19 @@
         url('HeatWave.ttf') format('truetype'),
         url('HeatWave.svg#HeatWave') format('svg');
     font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ArialMT';
+    src: url('ArialMT.eot');
+    src: url('ArialMT.eot?#iefix') format('embedded-opentype'),
+        url('ArialMT.woff2') format('woff2'),
+        url('ArialMT.woff') format('woff'),
+        url('ArialMT.ttf') format('truetype'),
+        url('ArialMT.svg#ArialMT') format('svg');
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -51,40 +77,14 @@
 }
 
 @font-face {
-    font-family: 'Autograf';
-    src: url('AutografPERSONALUSEONLY.eot');
-    src: url('AutografPERSONALUSEONLY.eot?#iefix') format('embedded-opentype'),
-        url('AutografPERSONALUSEONLY.woff2') format('woff2'),
-        url('AutografPERSONALUSEONLY.woff') format('woff'),
-        url('AutografPERSONALUSEONLY.ttf') format('truetype'),
-        url('AutografPERSONALUSEONLY.svg#AutografPERSONALUSEONLY') format('svg');
+    font-family: 'Trump Gothic Pro';
+    src: url('TrumpGothicPro.eot');
+    src: url('TrumpGothicPro.eot?#iefix') format('embedded-opentype'),
+        url('TrumpGothicPro.woff2') format('woff2'),
+        url('TrumpGothicPro.woff') format('woff'),
+        url('TrumpGothicPro.ttf') format('truetype'),
+        url('TrumpGothicPro.svg#TrumpGothicPro') format('svg');
     font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Myriad Pro';
-    src: url('MyriadPro-Regular.eot');
-    src: url('MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
-        url('MyriadPro-Regular.woff2') format('woff2'),
-        url('MyriadPro-Regular.woff') format('woff'),
-        url('MyriadPro-Regular.ttf') format('truetype'),
-        url('MyriadPro-Regular.svg#MyriadPro-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'ArialMT';
-    src: url('ArialMT.eot');
-    src: url('ArialMT.eot?#iefix') format('embedded-opentype'),
-        url('ArialMT.woff2') format('woff2'),
-        url('ArialMT.woff') format('woff'),
-        url('ArialMT.ttf') format('truetype'),
-        url('ArialMT.svg#ArialMT') format('svg');
-    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }

@@ -7,9 +7,10 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, HostListener, 
 })
 export class BackgroundComponent implements OnInit, AfterViewInit {
 
-  zTransform = 2000;
+  zTransform = -78;
   @ViewChild('videoEle') videoEle: ElementRef;
   @ViewChild('backgroundEle') private backgroundEle: ElementRef;
+  @ViewChild('pinkBackgroundEle') private pinkBackgroundEle: ElementRef;
   @HostListener('window:mousewheel', ['$event'])
   onMouseWheel(event: MouseWheelEvent): void {
     this.scrollElement(event.deltaY);
@@ -24,20 +25,36 @@ export class BackgroundComponent implements OnInit, AfterViewInit {
     const element = this.backgroundEle.nativeElement;
     const elementWidth = element.scrollWidth;
     this.zTransform += (deltaY / 2);
-    if (this.zTransform > 2500) {
-      this.zTransform = 250;
-    } else if (this.zTransform <= 0) {
-      this.zTransform = 2500;
+    if (this.zTransform > 70) {
+      this.zTransform = -78;
+    } else if (this.zTransform <= -79) {
+      this.zTransform = 69;
     }
     this.renderer.setStyle(
       element,
       'transform',
-      `translateZ(${this.zTransform}px)`
+      `translateZ(${this.zTransform}vw)`
       );
   }
 
   ngAfterViewInit(): void {
-    this.videoEle.nativeElement.play();
+  }
+
+  show(): void {
+    this.videoEle.nativeElement.pause();
+    setTimeout(() => {
+      this.renderer.addClass(
+        this.pinkBackgroundEle.nativeElement,
+        'pink'
+        );
+      this.renderer.addClass(
+        this.backgroundEle.nativeElement,
+        'show'
+        );
+      setTimeout(() => {
+        this.videoEle.nativeElement.play();
+      }, 1000);
+    }, 1000);
   }
 
 }

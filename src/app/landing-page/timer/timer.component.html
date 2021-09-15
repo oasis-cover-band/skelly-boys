@@ -1,0 +1,20 @@
+
+<p *ngIf="(((startTime | async) * 1000) - currentTime) > 1">In</p>
+  <span class="countdown" *ngIf="(((startTime | async) * 1000) - currentTime) > 1">
+     <span class="days"> <!-- DAYS -->
+      
+        {{((((startTime | async) * 1000) - currentTime)) / 86400000 | floor}} <small>days</small>
+    </span>
+    <span class="hours"><!-- HOURS -->
+      
+        {{((((startTime | async) * 1000) - currentTime)) % 86400000 / 3600000 | floor}} <small>hours</small>
+    </span>
+    <span class="minutes"><!-- MINUTES -->
+      
+        {{((((startTime | async) * 1000) - currentTime)) % 86400000 % 3600000 / 60000 | floor}} <small>mins</small>
+    </span>
+    <span class="seconds"><!-- SECONDS -->
+
+        {{((((startTime | async) * 1000) - currentTime)) % 86400000 % 3600000 % 60000 / 1000 | floor}} <small>secs</small>
+    </span>
+</span>

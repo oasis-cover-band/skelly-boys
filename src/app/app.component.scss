@@ -7,6 +7,7 @@
     grid-template-areas: 'content';
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    background:#000;
     app-background {
         z-index:1;
         grid-area:content;
@@ -44,6 +45,19 @@
                 animation: scroll 8s infinite;
                 animation-timing-function: linear;
                 background-size:100% 90%;
+                overflow:hidden;
+            }
+            h2 {
+                animation: scrollText 16s infinite;
+                transform: translateY(200%);
+                @keyframes scrollText {
+                    50% {
+                        transform: translateY(-100%);
+                    }
+                    75% {
+                        color:#FF00CC;
+                    }
+                }
             }
             @keyframes scroll {
                 50% {
@@ -72,5 +86,19 @@
         app-footer-page {
             grid-area:footer;
         }
+    }
+    main {
+        min-height: 100vh;
+        min-width: 100vw;
+        max-width:100vw;
+        display:grid;
+        grid-template-areas: 'content';
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-area:content;
+    }
+    router-outlet {
+        grid-area:content;
+        display:none;
     }
 }

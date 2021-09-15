@@ -1,0 +1,45 @@
+:host {
+    min-width:100%;  
+    justify-self: center;
+    p {
+        text-align:center;
+        margin:0px;
+        font-size:3.5rem;
+        color:#FF00CC;
+        font-family: 'HeatWave';
+        min-width:100%;
+
+    }
+    display:grid;
+    justify-content: stretch;
+    justify-items: stretch;
+    align-content: start;
+    align-items: start;
+    text-align: center;
+    span.countdown {   
+        text-align: center; 
+        min-width:100%;  
+        font-size:7.5rem;
+        font-family: 'Trump Gothic Pro';
+        display:grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 0.25fr;
+        small {
+            text-transform: uppercase;
+            font-variant-caps: all-small-caps;
+            font-size:2.5rem;
+        }
+        span.days {
+            justify-self: start;
+        }
+        span.hours {
+            justify-self: center;
+        }
+        span.minutes {
+            justify-self: center;
+        }
+        span.seconds {
+            justify-self: end;
+        }
+        }
+}

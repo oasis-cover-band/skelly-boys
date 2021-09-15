@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectService } from '../project.service';
 
 @Component({
   selector: 'app-vip-page',
@@ -7,15 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VipPageComponent implements OnInit {
 
-  vips = [
-    '../../assets/vips/Golden_Skully_Boys_Emerald.jpg',
-    '../../assets/vips/Golden_Skully_Boys_Emerald_2.jpg',
-    '../../assets/vips/Golden_Skully_Boys_Emerald_3.jpg',
-    '../../assets/vips/Golden_Skully_Boys_Emerald_4.jpg',
-    '../../assets/vips/Golden_Skully_Boys_Emerald_5.jpg',
-    // '../../assets/vips/Golden_Skully_Boys_Emerald_6.jpg',
-  ];
-  constructor() { }
+  vips = this.projectService.vips;
+  constructor(
+  private projectService: ProjectService
+  ) { }
 
   ngOnInit(): void {
   }

@@ -8,8 +8,11 @@
     row-gap:0px;
     transform:translateY(-12.5%) translateX(5%);
     max-height:30rem;
-    pointer-events: none;
     justify-self: center;
+    pointer-events: none!important;
+    * {
+        pointer-events: none!important;
+    }
     svg {
         grid-area:logo;
         transform:scale(2);
@@ -39,11 +42,11 @@
         }
     }
     @media (max-width:540px) {
-        transform:scale(1.5);
+        transform:scale(1.5) translate(10px, 0px);
         max-height:40rem;
     }
     @media (max-width:410px) {
-        transform:scale(1.75);
+        transform:scale(1.75) translate(10px, 10px);
         max-height:45rem;
     }
 }

@@ -17,5 +17,5 @@
     <br><br>
 </p>
 <div class="vip-boxes">
-    <app-vip-box [image]="vip" *ngFor="let vip of vips"></app-vip-box>
+    <app-vip-box [image]="vip" [index]="index" *ngFor="let vip of vips; let index = index"></app-vip-box>
 </div>

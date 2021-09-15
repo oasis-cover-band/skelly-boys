@@ -14,6 +14,9 @@
     cursor: pointer;
     transition:0.2s;
     pointer-events: visibleFill;
+    &:hover {
+        z-index:9999;
+    }
     section.inner {
         pointer-events: visibleFill;
         transition:0.2s;
@@ -29,46 +32,17 @@
             grid-area: image;
             z-index:100;
             max-width:15vw;
+            &:hover {
+                filter:brightness(1.5);
+            }
         }
     }
-    &.opened {
+    &.large {
         section.inner {
             img {
-                transform:scale(2) translateX(16.5vw);
+                max-height:60vh;
+                max-width:unset;
             }
         }
-        &:nth-of-type(2) {
-            section.inner {
-                img {
-                    transform:scale(2) translateX(8.25vw);
-                }
-            }
-        }
-        &:nth-of-type(3) {
-            section.inner {
-                img {
-                    transform:scale(2);
-                }
-            }
-        }
-        &:nth-of-type(4) {
-            section.inner {
-                img {
-                    transform:scale(2) translateX(-8.25vw);
-                }
-            }
-        }
-        &:nth-of-type(5) {
-            section.inner {
-                img {
-                    transform:scale(2) translateX(-16.5vw);
-                }
-            }
-        }
-        z-index:10000;
-    }
-    &:hover {
-        z-index:9999;
-        filter:brightness(1.5);
     }
 }

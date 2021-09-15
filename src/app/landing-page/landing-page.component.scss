@@ -19,6 +19,10 @@
         @media (max-width:410px) {
             transform:translateX(-75%);
         }
+        pointer-events: none!important;
+        * {
+            pointer-events: none!important;
+        }
     }
     section.welcome {
         min-height: 100vh;
@@ -49,6 +53,11 @@
             justify-self: center;
             justify-items: center;
             justify-content: center;
+            span.tag-line {
+                h5 {
+                    font-size:4rem;
+                }
+            }
         }
         h5 {
             span {

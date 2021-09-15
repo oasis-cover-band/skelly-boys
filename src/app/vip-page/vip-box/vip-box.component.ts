@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, HostBinding } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vip-box',
@@ -8,15 +9,18 @@ import { Component, OnInit, Input, HostBinding } from '@angular/core';
 export class VipBoxComponent implements OnInit {
 
   @Input() image = '../../../assets/images/mock_vip.svg';
-
-  @HostBinding('class.opened') opened = false;
-  constructor() { }
+  @Input() index = 0;
+  @HostBinding('class.large') @Input() large = false;
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
   open(): void {
-    this.opened = !this.opened;
+    this.router.navigateByUrl('view-vip/' + Number(this.index), {skipLocationChange: true});
+
   }
 
 }

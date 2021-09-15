@@ -5,6 +5,7 @@ import { SkellyBoyModule } from './skelly-boy/skelly-boy.module';
 import { LogoModule } from './logo/logo.module';
 import { MintButtonModule } from './mint-button/mint-button.module';
 import { SkellyNecklaceModule } from './skelly-necklace/skelly-necklace.module';
+import { TimerModule } from './timer/timer.module';
 
 
 
@@ -15,7 +16,8 @@ import { SkellyNecklaceModule } from './skelly-necklace/skelly-necklace.module';
     SkellyBoyModule,
     LogoModule,
     MintButtonModule,
-    SkellyNecklaceModule
+    SkellyNecklaceModule,
+    TimerModule
   ],
   exports: [
     LandingPageComponent

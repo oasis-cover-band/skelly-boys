@@ -1,7 +1,8 @@
 
-<span style="perspective: 5000px; perspective-origin: 50%;">
+<span style="perspective: 100vw; perspective-origin: 50%;">
 <section class="background" #backgroundEle>
+    <img src="../../assets/images/background.webp" (load)="show()" (loaded)="show()"/>
     </section>
-    <video #videoEle src="../../assets/videos/floor_smoke.mp4" autoplay repeat loop muted [muted]="true"></video>
-    <div class="background"></div>
+    <video #videoEle src="../../assets/videos/floor_smoke_c.webm" autoplay repeat loop muted [muted]="true"></video>
+    <div #pinkBackgroundEle class="background"></div>
 </span>

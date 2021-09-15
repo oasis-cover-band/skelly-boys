@@ -13,14 +13,21 @@
     border:2px solid #FF00CC;
     align-items:start;
     section.inner {
+        min-height:100%;
         grid-area:inner;
         display:grid;
         grid-template-areas:
         'index'
+        'heading'
         'text';
         grid-template-columns: 1fr;
-        grid-template-rows: max-content;
+        grid-template-rows: max-content 1fr 20vh;
         row-gap:3rem;
+        h3 {
+            grid-area:heading;
+            font-family: 'Kittaro';
+            font-size:3rem;
+        }
         h5 {
             justify-self: start;
             text-align: left;

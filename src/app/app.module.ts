@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,13 +12,17 @@ import { FooterPageModule } from './footer-page/footer-page.module';
 import { RoadmapPageModule } from './roadmap-page/roadmap-page.module';
 import { BackgroundModule } from './background/background.module';
 import { NavModule } from './nav/nav.module';
+import { LoadedDirective } from './load.directive';
+import { LoadingPageModule } from './loading-page/loading-page.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoadedDirective
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     LandingPageModule,
     AboutPageModule,
@@ -26,7 +31,8 @@ import { NavModule } from './nav/nav.module';
     FaqPageModule,
     FooterPageModule,
     BackgroundModule,
-    NavModule
+    NavModule,
+    LoadingPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

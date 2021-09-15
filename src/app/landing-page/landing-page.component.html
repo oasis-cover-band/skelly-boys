@@ -7,5 +7,6 @@
     <span class="tag-line">
         <h5>Let's taste<br> <span [class]="classes | async">{{keyword}}</span> with them</h5>
     </span>
-    <app-mint-button></app-mint-button>
+    <app-timer [currentTime]="currentTime" *ngIf="(((startTime | async) * 1000) - currentTime) > 1"></app-timer>
+    <app-mint-button *ngIf="(((startTime | async) * 1000) - currentTime) <= 0"></app-mint-button>
 </section>
