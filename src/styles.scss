@@ -15,11 +15,13 @@ html, body {
     color:#FFF;
     overflow-x:hidden;
     font-size:16px;
+    background:#2c2c2c;
     scroll-behavior: smooth;
     scrollbar-width: thin;          /* "auto" or "thin" */
     scrollbar-color: #FF00CC #2c2c2c;   /* scroll thumb and track */
     ::-webkit-scrollbar {
-      width: 12px;               /* width of the entire scrollbar */
+      width: 14px;               /* width of the entire scrollbar */
+      background: #2c2c2c;        /* color of the tracking area */
     }
     
     ::-webkit-scrollbar-track {
@@ -27,7 +29,7 @@ html, body {
     }
     
     ::-webkit-scrollbar-thumb {
-        border-radius:20px;
+        // border-radius:20px;
       background-color: #FF00CC;    /* color of the scroll thumb */
       border: 3px solid #2c2c2c;  /* creates padding around scroll thumb */
     }

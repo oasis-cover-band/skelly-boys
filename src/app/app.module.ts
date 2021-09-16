@@ -14,11 +14,13 @@ import { BackgroundModule } from './background/background.module';
 import { NavModule } from './nav/nav.module';
 import { LoadedDirective } from './load.directive';
 import { LoadingPageModule } from './loading-page/loading-page.module';
+import { PlayingDirective } from './play.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoadedDirective
+    LoadedDirective,
+    PlayingDirective
   ],
   imports: [
     BrowserModule,

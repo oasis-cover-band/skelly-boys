@@ -49,12 +49,12 @@
             grid-auto-columns: 10vw;
             column-gap:7.5vw;
         }
-        transform:translateX(50%);
+        transform:translateX(12.5%);
 
         animation: sliding 32s infinite;
         @keyframes sliding {
             50% {
-                transform:translateX(-50%);
+                transform:translateX(-12.5%);
             }
         }
         &:hover {

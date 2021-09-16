@@ -7,7 +7,8 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, HostListener, 
 })
 export class BackgroundComponent implements OnInit, AfterViewInit {
 
-  zTransform = -78;
+  videoPlaying = false;
+  zTransform = 0;
   @ViewChild('videoEle') videoEle: ElementRef;
   @ViewChild('backgroundEle') private backgroundEle: ElementRef;
   @ViewChild('pinkBackgroundEle') private pinkBackgroundEle: ElementRef;
@@ -25,10 +26,10 @@ export class BackgroundComponent implements OnInit, AfterViewInit {
     const element = this.backgroundEle.nativeElement;
     const elementWidth = element.scrollWidth;
     this.zTransform += (deltaY / 2);
-    if (this.zTransform > 70) {
-      this.zTransform = -78;
+    if (this.zTransform > 20) {
+      this.zTransform = -50;
     } else if (this.zTransform <= -79) {
-      this.zTransform = 69;
+      this.zTransform = -20;
     }
     this.renderer.setStyle(
       element,
@@ -38,10 +39,15 @@ export class BackgroundComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+    setTimeout(() => {
+      if (this.videoPlaying === false) {
+        this.videoEle.nativeElement.play();
+        this.renderer.setProperty(this.videoEle.nativeElement, 'play', true);
+      }
+    }, 4000);
   }
 
   show(): void {
-    this.videoEle.nativeElement.pause();
     setTimeout(() => {
       this.renderer.addClass(
         this.pinkBackgroundEle.nativeElement,
@@ -51,10 +57,11 @@ export class BackgroundComponent implements OnInit, AfterViewInit {
         this.backgroundEle.nativeElement,
         'show'
         );
-      setTimeout(() => {
-        this.videoEle.nativeElement.play();
-      }, 1000);
     }, 1000);
+  }
+
+  play(): void {
+    this.videoPlaying = true;
   }
 
 }

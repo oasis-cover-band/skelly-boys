@@ -1,6 +1,7 @@
 import { Directive, Output, EventEmitter, ElementRef, HostListener, OnInit } from '@angular/core';
 
 @Directive({
+  // tslint:disable-next-line:directive-selector
   selector: 'img[loaded]'
 })
 export class LoadedDirective {

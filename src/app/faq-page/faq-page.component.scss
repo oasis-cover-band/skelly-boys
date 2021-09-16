@@ -10,6 +10,7 @@
     grid-auto-rows: max-content;
     justify-content: center;
     justify-items: center;
+    align-self: center;
     row-gap:2rem;
     span.heading {
         display:grid;
@@ -34,6 +35,7 @@
         }
     }
     div.faq-items {
+        align-self: start;
         max-width:100%;
         max-height:100%;
         min-width:100%;

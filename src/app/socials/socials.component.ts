@@ -14,7 +14,7 @@ export class SocialsComponent implements OnInit {
     discord: 'https://discord.gg/N28uSH94MA',
     twitter: 'https://twitter.com/SkullyBoysBC',
     instagram: 'https://www.instagram.com/theskullyboys/',
-    opensea: 'https://google.com'
+    medium: 'https://google.com'
   };
 
   constructor() { }

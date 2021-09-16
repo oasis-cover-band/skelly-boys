@@ -1,6 +1,8 @@
 :host {
     min-width:100vw;
     max-width:100vw;
+    min-height:10vh;
+    height:10vh;
     max-height:10vh;
     grid-area:nav;
     display:grid;
@@ -65,9 +67,11 @@
         }
     }
     @media (max-height:400px) {
+        height:15vh;
         max-height:15vh;
     }
     @media (max-height:250px) {
+        height:20vh;
         max-height:20vh;
     }
     @media (max-width: 820px) {

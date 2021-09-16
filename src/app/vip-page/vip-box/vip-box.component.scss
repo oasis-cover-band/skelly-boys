@@ -45,4 +45,11 @@
             }
         }
     }
+    @media (max-width:1000px) {
+        section.inner {
+            img {
+                max-width:30vw;
+            }
+        }
+    }
 }

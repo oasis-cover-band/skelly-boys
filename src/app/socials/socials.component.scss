@@ -64,6 +64,11 @@
                 svg {
                     fill:#FF00CC;
                 }
+                &.medium {
+                    * {
+                        fill:#FF00CC;
+                    }
+                }
             }
         }
     }
