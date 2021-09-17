@@ -10,7 +10,6 @@ export class LoadedDirective {
 
   @HostListener('load')
   onLoad(): void {
-    console.dir('lopaded');
     this.loaded.emit();
   }
 

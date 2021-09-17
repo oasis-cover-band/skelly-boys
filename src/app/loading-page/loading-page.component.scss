@@ -20,6 +20,9 @@
     align-items: center;
     justify-items: center;
     align-content: center;
+    @media (max-width:600px) {
+        row-gap:15vh;
+    }
     // &:after {
     //     position:absolute;
     //     content:'';

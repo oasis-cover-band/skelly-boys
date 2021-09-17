@@ -86,6 +86,7 @@
         app-footer-page {
             grid-area:footer;
         }
+        pointer-events: all;
     }
     main {
         min-height: 100vh;

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ElementRef } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -52,7 +52,7 @@ export class ProjectService {
 
       Skully Boys will be online at www.skullyboys.io.
 
-      When the market will be sold out you will have to go to opensea.
+      When the market will be sold out you will have to go to DigitalEyes or Solanart.
 
       Skully Boys will be blind minted for 2 SOL`
     },
@@ -84,6 +84,8 @@ export class ProjectService {
     [`The Vision`, `This is just the beginning of the Skully Epic, do not blink or you will miss something!`],
   ];
 
-  public startTime = new BehaviorSubject(1632166860); // Monday, September 20, 2021 7:41:00 PM GMT
+  public startTime = new BehaviorSubject(1632268800); // Monday, September 20, 2021 7:41:00 PM GMT
+
+  public videoEle: BehaviorSubject<ElementRef | undefined> = new BehaviorSubject(undefined); // to play on iOS
   constructor() { }
 }

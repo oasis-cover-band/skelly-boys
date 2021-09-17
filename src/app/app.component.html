@@ -1,6 +1,6 @@
 <app-nav *ngIf="afterViewInit === true" [@fadeDownAnimations]></app-nav>
 <app-background *ngIf="afterViewInit === true" [@fadeAnimations]></app-background>
-<section class="content" *ngIf="afterViewInit === true" [@fadeUpAnimations]>
+<section class="content" *ngIf="afterViewInit === true" [@fadeUpAnimations] (click)="playVideo()">
   <div class="spacer"></div>
   <app-landing-page></app-landing-page>
   <app-about-page></app-about-page>

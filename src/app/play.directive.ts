@@ -10,7 +10,6 @@ export class PlayingDirective {
 
   @HostListener('check')
   onLoad(): void {
-    console.dir('lopaded');
     this.check.emit();
   }
 
