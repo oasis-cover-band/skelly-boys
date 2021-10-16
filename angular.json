@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "skully-boys": {
+    "skelly-boys": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/skully-boys",
+            "outputPath": "dist/skelly-boys",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "skully-boys:build"
+            "browserTarget": "skelly-boys:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "skully-boys:build:production"
+              "browserTarget": "skelly-boys:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "skully-boys:build"
+            "browserTarget": "skelly-boys:build"
           }
         },
         "test": {
@@ -113,16 +113,20 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "skully-boys:serve"
+            "devServerTarget": "skelly-boys:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "skully-boys:serve:production"
+              "devServerTarget": "skelly-boys:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
   },
-  "defaultProject": "skully-boys"
+  "defaultProject": "skelly-boys"
 }

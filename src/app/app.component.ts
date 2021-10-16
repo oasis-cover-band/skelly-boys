@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
   animations: [fadeUpAnimations, fadeDownAnimations, fadeAnimations, routerAnimations]
 })
 export class AppComponent implements AfterContentInit {
-  title = 'skully-boys';
+  title = 'skelly-boys';
   afterViewInit = false;
   videoEle: BehaviorSubject<ElementRef> = this.projectService.videoEle;
   constructor(
