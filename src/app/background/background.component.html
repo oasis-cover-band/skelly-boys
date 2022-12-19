@@ -1,8 +1,8 @@
 
 <span style="webkit-perspective: 100vw; perspective: 100vw; webkit-perspective-origin: 50%; perspective-origin: 50%;">
 <section class="background" [style.background-position]="transforms" #backgroundEle>
-    <img src="../../assets/images/background.webp" (load)="show()" (loaded)="show()"/>
+    <img src="assets/images/background.webp" (load)="show()" (loaded)="show()"/>
 </section>
-    <video #videoEle src="../../assets/videos/floor_smoke.webm" autoplay repeat loop muted playsinline [muted]="true" (check)="play()"></video>
+    <video #videoEle src="assets/videos/floor_smoke.webm" autoplay repeat loop muted playsinline [muted]="true" (check)="play()"></video>
     <!-- <div #pinkBackgroundEle class="background"></div> -->
 </span>

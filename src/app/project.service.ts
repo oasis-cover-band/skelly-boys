@@ -9,13 +9,13 @@ export class ProjectService {
   public mintCost = 2;
   public mintCurrency = 'SOL';
   public vips = [
-    '../../assets/vips/01.png',
-    '../../assets/vips/02.png',
-    '../../assets/vips/03.png',
-    '../../assets/vips/04.png',
-    '../../assets/vips/05.png',
-    '../../assets/vips/06.png',
-    '../../assets/vips/07.png',
+    'assets/vips/01.png',
+    'assets/vips/02.png',
+    'assets/vips/03.png',
+    'assets/vips/04.png',
+    'assets/vips/05.png',
+    'assets/vips/06.png',
+    'assets/vips/07.png',
   ];
 
   public faqs = [

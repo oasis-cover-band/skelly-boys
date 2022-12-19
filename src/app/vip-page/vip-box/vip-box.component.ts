@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class VipBoxComponent implements OnInit {
 
-  @Input() image = '../../../assets/images/mock_vip.svg';
+  @Input() image = 'assets/images/mock_vip.svg';
   @Input() index = 0;
   @HostBinding('class.large') @Input() large = false;
   constructor(
